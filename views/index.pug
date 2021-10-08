@@ -68,7 +68,8 @@ script(type="text/javascript").
                 // Learn more about options https://docs.microsoft.com/azure/cognitive-services/immersive-reader/reference#options
                 const options = {
                     "onExit": exitCallback,
-                    "uiZIndex": 2000
+                    "uiZIndex": 2000,
+                    "uiLang": 'de'
                 };
                 ImmersiveReader.launchAsync(token, subdomain, data, options)
                     .catch(function (error) {

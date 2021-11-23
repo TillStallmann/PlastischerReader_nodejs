@@ -1,17 +1,24 @@
 doctype html
 html
    head
-      title Immersive Reader
+      title Blitz-Birne
 
       link(rel='icon', href='data:;base64,iVBORw0KGgo=')
 
-      link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css')
+      <!--link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css')-->
+      link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+
+      link(rel='stylesheet', href='stylesheets/style.css')
 
       // A polyfill for Promise is needed for IE11 support.
       script(src='https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js')
 
-      script(src='https://contentstorage.onenote.office.net/onenoteltir/immersivereadersdk/immersive-reader-sdk.1.1.0.js')
+      <!--script(src='https://contentstorage.onenote.office.net/onenoteltir/immersivereadersdk/immersive-reader-sdk.1.1.0.js')-->
+      script(src='javascripts/immersive-reader-sdk.1.1.0.js')
+
       script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+
+
 
       style(type="text/css").
         .immersive-reader-button {
@@ -19,14 +26,27 @@ html
           margin-top: 5px;
           border: 1px solid black;
           float: right;
+          font-size: 16pt;
+        }
+        container{
+            background-color: ff0000
         }
 
-   body
-      div(class="container")
-        button(class="immersive-reader-button" data-button-style="iconAndText" data-locale="en")
 
-        h1(id="ir-title") THERAPIEZENTRUM Ramacher-Faasen
-        <textarea id="eingabe" name="eingabe" rows="30" cols="150"></textarea>
+
+   body
+      center
+        <img src="images/tz_logo_klein.png" alt="Vertr.-Prof. Dr. Ramacher-Faasen"/>
+      center
+        <textarea id="eingabe" name="eingabe" rows="25" cols="100" autocorrect="on" STYLE="font-size: 20pt; padding: 20px;" placeholder="Hier schreiben..."></textarea>
+
+      div(class="container")
+        button(class="immersive-reader-button" data-button-style="iconAndText" data-locale="vorlesen" data-icon-px-size="26")
+
+
+<!--curl -X POST --header 'Content-Type: application/x-www-form-urlencoded' --header 'Accept: application/json' -d 'text=HAllo%20das%20ist%20ein%20test&language=de-DE&enabledOnly=false' 'https://api.languagetoolplus.com/v2/check'-->
+
+
 
 script(type="text/javascript").
   function getTokenAndSubdomainAsync() {

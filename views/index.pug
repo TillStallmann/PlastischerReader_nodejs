@@ -26,22 +26,21 @@ html
           margin-top: 5px;
           border: 1px solid black;
           float: right;
-          font-size: 16pt;
+          font-size: 20pt;
         }
-        container{
-            background-color: ff0000
-        }
-
 
 
    body
       center
         <img src="images/tz_logo_klein.png" alt="Vertr.-Prof. Dr. Ramacher-Faasen"/>
+        br
+        br
+        br
+        br
       center
-        <textarea id="eingabe" name="eingabe" rows="25" cols="100" autocorrect="on" STYLE="font-size: 20pt; padding: 20px;" placeholder="Hier schreiben..."></textarea>
-
-      div(class="container")
-        button(class="immersive-reader-button" data-button-style="iconAndText" data-locale="vorlesen" data-icon-px-size="26")
+        <textarea id="eingabe" name="eingabe" rows="25" cols="100%" autocorrect="on" STYLE="font-size: 20pt; padding: 40px;" placeholder="Hier schreiben..."></textarea>
+        div(class="vorlese_container")
+            button(class="immersive-reader-button" data-button-style="iconAndText" data-locale="vorlesen" data-icon-px-size="34")
 
 
 <!--curl -X POST --header 'Content-Type: application/x-www-form-urlencoded' --header 'Accept: application/json' -d 'text=HAllo%20das%20ist%20ein%20test&language=de-DE&enabledOnly=false' 'https://api.languagetoolplus.com/v2/check'-->
